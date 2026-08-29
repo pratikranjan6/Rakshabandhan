@@ -9,19 +9,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <!--
-=========================================================================
   ✦ HOW TO PERSONALIZE THIS SURPRISE ✦
   Everything you need to change lives in ONE place: the CONFIG object
   near the top of the <script> at the bottom of this file.
   Look for the block that starts with:  const CONFIG = {
   You do not need to touch any other code.
-=========================================================================
 -->
 
 <style>
-  /* =====================================================
+  /* 
      DESIGN TOKENS
-  ===================================================== */
+   */
   :root{
     --cream:      #FBF3E8;
     --cream-deep: #F4E7D3;
@@ -73,13 +71,13 @@
     *{animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important;}
   }
 
-  /* =====================================================
+  /* 
      SIGNATURE ELEMENT — the Rakhi thread progress trail
      A kalava (sacred thread) winds across the top of the
      screen; a gold knot travels along it as she moves
      through the chapters, and on the final page the thread
      ties itself into a bow.
-  ===================================================== */
+  */
   .thread-wrap{
     position:fixed; top:0; left:0; right:0; z-index:40;
     padding:14px 18px 0; pointer-events:none;
@@ -102,9 +100,9 @@
     color:var(--maroon); opacity:.55; margin-top:2px;
   }
 
-  /* =====================================================
+  /* 
      APP SHELL
-  ===================================================== */
+  */
   .app{
     position:relative; min-height:100dvh; width:100%;
     display:flex; align-items:center; justify-content:center;
@@ -133,7 +131,7 @@
     position:relative;
     border:1px solid rgba(199,154,52,.18);
   }
-  .card::before{ /* corner motif */
+  .card::before{ 
     content:'';
     position:absolute; inset:10px;
     border:1px solid rgba(199,154,52,.28);
@@ -164,7 +162,7 @@
   .center{text-align:center;}
   .muted{color:var(--ink-soft);}
 
-  /* decorative floaters (petals / sparkles) */
+ 
   .floaters{position:fixed; inset:0; pointer-events:none; z-index:5; overflow:hidden;}
   .floater{position:absolute; will-change:transform, opacity; user-select:none;}
 
@@ -178,9 +176,9 @@
     font-size:1.15rem;
   }
 
-  /* =====================================================
+  /* 
      PAGE 1 — ENVELOPE
-  ===================================================== */
+  */
   .envelope-stage{
     display:flex; flex-direction:column; align-items:center; gap:26px;
   }
@@ -231,9 +229,9 @@
     font-style:italic;
   }
 
-  /* =====================================================
+  /* 
      PAGE 2 — GALLERY
-  ===================================================== */
+ */
   .gallery-title{margin-bottom:6px;}
   .timeline{
     position:relative; margin-top:30px;
@@ -300,9 +298,9 @@
     background:rgba(255,255,255,.9); border:none; font-size:1.1rem; color:var(--maroon);
   }
 
-  /* =====================================================
+  /* 
      PAGE 3 — REVEAL CARDS
-  ===================================================== */
+ */
   .reveal-stage{display:flex; flex-direction:column; align-items:center; gap:22px;}
   .reveal-card{
     width:100%; max-width:380px; min-height:190px;
@@ -322,9 +320,9 @@
   .reveal-done{display:none; text-align:center;}
   .reveal-done.show{display:block; animation:msgIn .6s var(--ease);}
 
-  /* =====================================================
+  /* 
      PAGE 4 — GIFT
-  ===================================================== */
+*/
   .gift-stage{display:flex; flex-direction:column; align-items:center; gap:18px;}
   .gift-box{
     width:170px; height:150px; position:relative; cursor:pointer; margin-top:10px;
@@ -379,9 +377,9 @@
     color:var(--maroon); line-height:1.6; white-space:pre-line;
   }
 
-  /* =====================================================
+  /*
      PAGE 5 — FINALE
-  ===================================================== */
+ */
   .finale-bg{
     position:absolute; inset:0; z-index:-1; pointer-events:none;
     background:radial-gradient(circle at 50% 0%, rgba(240,175,192,.35), transparent 55%);
@@ -439,13 +437,13 @@
 
 <div class="app">
 
-  <!-- ================= PAGE 1 : WELCOME / ENVELOPE ================= -->
+  <!--  PAGE 1 : WELCOME / ENVELOPE  -->
   <section class="page active" id="page1">
     <div class="card">
       <div class="scene envelope-scene" id="envelopeScene">
         <div class="envelope-stage">
           <p class="eyebrow center" style="width:100%;">A little something for you</p>
-          <h1 class="display center" style="font-size:1.9rem; margin:0;">To My Dearest Sister ❤️</h1>
+          <h1 class="display center" style="font-size:1.9rem; margin:0;">To My Dearest Didis.. ❤️</h1>
           <div class="envelope" id="envelope">
             <div class="glow-ring"></div>
             <div class="body"></div>
@@ -462,9 +460,9 @@
         <div class="center">
           <p class="eyebrow">Raksha Bandhan</p>
           <h1 class="display" style="font-size:2.1rem; margin:8px 0 4px;">
-            Happy Raksha Bandhan, <span class="sister-name" id="welcomeName">Sister</span> ❤️
+            Happy Raksha Bandhan, <span class="sister-name" id="welcomeName">Lopu & Lozss</span> ❤️
           </h1>
-          <p class="muted" style="font-size:1.02rem; margin-top:10px;">I made something special just for you.</p>
+          <p class="muted" style="font-size:1.02rem; margin-top:10px;">I made something special for you.</p>
           <div class="btn-row">
             <button class="btn" id="beginBtn">Let's Begin ✨</button>
           </div>
@@ -473,7 +471,7 @@
     </div>
   </section>
 
-  <!-- ================= PAGE 2 : MEMORIES ================= -->
+  <!--  PAGE 2 : MEMORIES  -->
   <section class="page" id="page2">
     <div class="card">
       <p class="eyebrow center" style="width:100%;">Chapter Two</p>
@@ -490,7 +488,7 @@
     </div>
   </section>
 
-  <!-- ================= PAGE 3 : THINGS I DON'T SAY ENOUGH ================= -->
+  <!--  PAGE 3 : THINGS I DON'T SAY ENOUGH  -->
   <section class="page" id="page3">
     <div class="card">
       <p class="eyebrow center" style="width:100%;">Chapter Three</p>
@@ -519,7 +517,7 @@
     </div>
   </section>
 
-  <!-- ================= PAGE 4 : SURPRISE ================= -->
+  <!--  PAGE 4 : SURPRISE -->
   <section class="page" id="page4">
     <div class="card">
       <p class="eyebrow center" style="width:100%;">Chapter Four</p>
@@ -553,14 +551,14 @@
     </div>
   </section>
 
-  <!-- ================= PAGE 5 : FINAL MESSAGE ================= -->
+  <!--  PAGE 5 : FINAL MESSAGE  -->
   <section class="page" id="page5">
     <div class="finale-bg"></div>
     <div class="card">
       <div class="diya-row"><span>🪔</span><span>🌸</span><span>🪔</span></div>
       <h1 class="display center" style="font-size:2rem; margin:14px 0 0;" id="finalName">Happy Raksha Bandhan, Sister ❤️</h1>
       <p class="final-message" id="finalMessage"></p>
-      <p class="signature-line" id="signatureLine">Always your annoying brother ❤️</p>
+      <p class="signature-line" id="signatureLine">Always your annoying brother Pratik ❤️</p>
       <p class="made-with">Made with ❤️ just for you</p>
       <div class="btn-row">
         <button class="btn" id="replayBtn">Replay Our Story ✨</button>
@@ -585,29 +583,22 @@
 <audio id="bgMusic" loop preload="none"></audio>
 
 <script>
-/* =========================================================================
+/* 
    ✦✦✦  CONFIG — CHANGE EVERYTHING HERE  ✦✦✦
    This is the only section you should need to edit.
-========================================================================= */
+ */
 const CONFIG = {
 
-  SISTER_NAME: "Sister",
-  BROTHER_NAME: "Your Brother",
+  SISTER_NAME: "Lopu & Lozss",
+  BROTHER_NAME: "Pratik",
 
-  // Optional background music. Put a file (e.g. "music.mp3") next to this
-  // HTML file and put its filename here. Leave as "" to skip music.
   MUSIC_SRC: "",
 
-  // 6–10 memories. For each photo, set `src` to your own image path
-  // (e.g. "photos/1.jpg"). Leave `src` as "" to show a placeholder
-  // until you add the real photo.
   PHOTOS: [
-    { src: "WhatsApp Image 2026-08-29 at 12.36.49 PM.jpeg", caption: "The good old days 🥹", year: "" },
-    // { src: "", caption: "Partners in crime 😂", year: "" },
-    { src: "", caption: "One of my favourite memories ❤️", year: "" },
-    { src: "", caption: "Even our fights became memories.", year: "" },
-    { src: "", caption: "Always my sister, always my family.", year: "" },
-    { src: "", caption: "Growing up, side by side.", year: "" },
+    { src: "WhatsApp Image 2026-08-29 at 2.02.01 PM (1) copy.jpeg", caption: "The good old days 🥹", year: "" },
+    { src: "WhatsApp Image 2026-08-29 at 2.02.01 PM.jpeg", caption: "One of my favourite memories ❤️", year: "" },
+    { src: "WhatsApp Image 2026-08-29 at 2.17.40 PM.jpeg", caption: "Even our fights became memories.", year: "" },
+    { src: "WhatsApp Image 2026-08-29 at 12.36.49 PM.jpeg", caption: "Growing up, side by side.", year: "" },
   ],
 
   // Messages revealed one tap at a time on the "Things I Don't Say
@@ -615,31 +606,32 @@ const CONFIG = {
   MESSAGES: [
     "Thank you for always being there for me.",
     "Sorry for all the times I've annoyed you... although I probably won't stop. 😂",
-    "No matter how much we fight, you'll always be one of my favourite people.",
-    "I'm genuinely lucky to have you as my sister.",
-    "You can always count on me, no matter what.",
-    "Some things don't need to be said every day. But today, I want you to know that I love you.",
+    "No matter how much we fight, you'll always be one of my favourite people.(Specially for lozy😘)",
+    "I'm genuinely lucky to have you as my sister. you dont know how much you both mean to me.",
+    "Through every high and every low, remember that you’ll always have me by your side. You can count on me, no matter what. 🫶",
+    "Some things are understood without ever being said. But today, I want to say what my heart has always known  I love you more than words could ever express. ❤️",
   ],
 
-  // The content revealed inside the gift box on the surprise page.
-  // Use \n for a new line. Add a gift voucher, QR code description,
-  // announcement, promise — anything you like.
+ 
   SURPRISE_CONTENT: "Whatever you're imagining right now...\nit's even better than that. 😉\n\nCome find me for the real thing!",
 
-  // The closing letter on the final page. Use \n\n for new paragraphs.
   FINAL_MESSAGE:
-`We may fight, argue, annoy each other, and sometimes drive each other crazy...
+`We may fight, argue, annoy each other, and sometimes drive each other completely crazy… 😂❤️
 
-But no matter where life takes us, you'll always have a brother who is just one call away.
+But no matter where life takes us, always remember that you’ll have a brother who is just one call away. Whenever you need me  whether it’s for something big, something small, or simply because you feel like talking , never hesitate to reach out. Never think that I’ll judge you or misunderstand you. You can always come to me, no matter what, because I’ll always be there for you. 🤝❤️
 
-Thank you for being my sister, my partner in crime, and one of the most special people in my life.
+Thank you for being not just my sister, but also my best friend, my guide, my constant support, and one of the most precious people in my life. Having you as my sister is truly one of the greatest blessings I could ask for.
 
-Happy Raksha Bandhan! 🫶`,
+No matter how much we grow, how far we go, or how much life changes, you’ll always have your brother standing by your side. ❤️
+
+ Happy Raksha Bandhan, Sis! 🫶🎀
+Always remember  you’re never alone. Your brother is just one call away. ❤️
+`,
 };
 
-/* =========================================================================
+/* 
    APP LOGIC — no need to edit below this line
-========================================================================= */
+ */
 (function(){
   const $ = (sel, root=document) => root.querySelector(sel);
   const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
