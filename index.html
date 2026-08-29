@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>For My Sister — A Raksha Bandhan Story</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="thread-wrap">
+    <div class="thread-inner">
+      <svg class="thread-svg" viewBox="0 0 600 34" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="threadGradient" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#C79A34"/>
+            <stop offset="50%" stop-color="#E38334"/>
+            <stop offset="100%" stop-color="#7A1F2B"/>
+          </linearGradient>
+        </defs>
+        <path id="threadPath" class="thread-path" d="M10,17 Q150,2 300,17 T590,17"/>
+        <circle id="threadKnot" class="thread-knot" cx="10" cy="17"/>
+      </svg>
+      <div class="thread-label" id="threadLabel">Chapter 1 of 5</div>
+    </div>
+  </div>
+
+  <button class="music-btn" id="musicBtn" title="Toggle music">🔇</button>
+  <div class="floaters" id="floaters"></div>
+
+  <div class="app">
+    <section class="page active" id="page1">
+      <div class="card">
+        <div class="scene envelope-scene" id="envelopeScene">
+          <div class="envelope-stage">
+            <p class="eyebrow center" style="width:100%;">A little something for you</p>
+            <h1 class="display center" style="font-size:1.9rem; margin:0;">To My Dearest Didis.. ❤️</h1>
+            <div class="envelope" id="envelope">
+              <div class="glow-ring"></div>
+              <div class="body"></div>
+              <div class="letter">You have a little<br>surprise waiting...</div>
+              <div class="flap"></div>
+              <div class="seal">🪔</div>
+            </div>
+            <p class="muted center" style="max-width:320px;">You have a little surprise waiting for you...</p>
+            <button class="btn" id="openEnvelopeBtn">Open It ✨</button>
+          </div>
+        </div>
+
+        <div class="scene welcome-scene hidden" id="welcomeScene">
+          <div class="center">
+            <p class="eyebrow">Raksha Bandhan</p>
+            <h1 class="display" style="font-size:2.1rem; margin:8px 0 4px;">
+              Happy Raksha Bandhan, <span class="sister-name" id="welcomeName">Lopu & Lozss</span> ❤️
+            </h1>
+            <p class="muted" style="font-size:1.02rem; margin-top:10px;">I made something special for you.</p>
+            <div class="btn-row">
+              <button class="btn" id="beginBtn">Let's Begin ✨</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="page2">
+      <div class="card">
+        <p class="eyebrow center" style="width:100%;">Chapter Two</p>
+        <h2 class="display gallery-title center" style="font-size:1.7rem;">A Little Journey Through Our Memories ❤️</h2>
+        <p class="muted center">Tap any memory to see it up close.</p>
+
+        <div class="timeline" id="timeline"></div>
+
+        <div class="page-nav">
+          <button class="btn ghost" data-goto="1">← Back</button>
+          <span class="page-count">2 / 5</span>
+          <button class="btn" data-goto="3">Continue →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="page3">
+      <div class="card">
+        <p class="eyebrow center" style="width:100%;">Chapter Three</p>
+        <h2 class="display center" style="font-size:1.7rem;">Things I Don't Say Enough...</h2>
+
+        <div class="reveal-stage">
+          <div class="reveal-card" id="revealCard">
+            <div>
+              <div class="msg" id="revealMsg">Tap to reveal ❤️</div>
+              <div class="tap-hint" id="revealHint" style="margin-top:10px;">(tap the card)</div>
+            </div>
+          </div>
+          <div class="reveal-progress" id="revealProgress">0 / 6</div>
+
+          <div class="reveal-done" id="revealDone">
+            <p class="muted" style="font-style:italic;">And there are still a thousand things I could say...</p>
+            <p class="display" style="font-size:1.2rem; color:var(--maroon);">But let's move to your surprise 🎁</p>
+          </div>
+        </div>
+
+        <div class="page-nav">
+          <button class="btn ghost" data-goto="2">← Back</button>
+          <span class="page-count">3 / 5</span>
+          <button class="btn" data-goto="4" id="toSurpriseBtn">Continue →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="page4">
+      <div class="card">
+        <p class="eyebrow center" style="width:100%;">Chapter Four</p>
+        <div class="center">
+          <p class="muted" style="margin-bottom:2px;">Okay... enough emotional stuff. 😌</p>
+          <h2 class="display" style="font-size:1.7rem; margin-top:0;">Your Rakhi Surprise Is Here!</h2>
+        </div>
+
+        <div class="gift-stage">
+          <div class="gift-box" id="giftBox">
+            <div class="gift-glow"></div>
+            <div class="gift-base"></div>
+            <div class="gift-ribbon-v"></div>
+            <div class="gift-ribbon-h"></div>
+            <div class="gift-lid"></div>
+            <div class="gift-bow">🎀</div>
+          </div>
+          <button class="btn" id="openGiftBtn">Open Your Gift 🎁</button>
+
+          <div class="surprise-card" id="surpriseCard">
+            <p class="eyebrow">For You, With Love ❤️</p>
+            <div class="surprise-content" id="surpriseContent"></div>
+          </div>
+        </div>
+
+        <div class="page-nav">
+          <button class="btn ghost" data-goto="3">← Back</button>
+          <span class="page-count">4 / 5</span>
+          <button class="btn" data-goto="5" id="toFinalBtn">Continue →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="page5">
+      <div class="finale-bg"></div>
+      <div class="card">
+        <div class="diya-row"><span>🪔</span><span>🌸</span><span>🪔</span></div>
+        <h1 class="display center" style="font-size:2rem; margin:14px 0 0;" id="finalName">Happy Raksha Bandhan, Sister ❤️</h1>
+        <p class="final-message" id="finalMessage"></p>
+        <p class="signature-line" id="signatureLine">Always your annoying brother Pratik ❤️</p>
+        <p class="made-with">Made with ❤️ just for you</p>
+        <div class="btn-row">
+          <button class="btn" id="replayBtn">Replay Our Story ✨</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lightboxClose">✕</button>
+      <div class="photo-frame" id="lightboxFrame"></div>
+      <div class="lightbox-caption">
+        <p class="display" id="lightboxCaption" style="font-size:1.2rem; font-style:italic; margin:0 0 4px;"></p>
+        <span class="muted" id="lightboxYear" style="font-size:.75rem; letter-spacing:.1em; text-transform:uppercase;"></span>
+      </div>
+    </div>
+  </div>
+
+  <audio id="bgMusic" loop preload="none"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
