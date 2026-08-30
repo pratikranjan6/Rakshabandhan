@@ -1,1 +1,7 @@
 # Ignore local image files
+images/
+.jpeg,
+.jpg,
+.png,
+.webp,
+.gif
